@@ -1,0 +1,165 @@
+.home-swiper-banner
+	.swiper-container
+		height: 100vh
+	.swiper-slide
+		position: relative
+	.wrapper
+		position: relative
+		height: 100%
+		&:before
+			z-index: 1
+			pointer-events: none
+			content: ''
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 50%
+			background: linear-gradient(180deg,rgba(#000000,0), rgba(#000000,0.8) )
+	.swiper-media
+		position: relative
+		height: 100vh
+		width: auto
+		overflow: hidden
+		.play
+			height: 100%
+			position: relative
+			&__icon
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				position: absolute
+				z-index: 1
+				background: url('../img/play-icon.png')
+				background-size: cover
+				background-repeat: no-repeat
+				height: 80px
+				width: 80px
+				pointer-events: none
+				@media screen and(max-width:768px)
+					top: 40%
+		.play-icon
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				z-index: 1
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				width: 80px
+				height: 80px
+				background: rgba(#ffffff,.7)
+				border-radius: 50%
+				pointer-events: none
+			&:after
+				z-index: 0
+				background: none
+				content: '\f40a'
+				font-family: 'Material Design Icons'
+				font-size: 62px
+				display: block
+				position: absolute
+				left: 50%
+				top: 50%
+				pointer-events: none
+				transform: translate(-50%,-50%)
+		video,img
+			width: 100%
+			object-fit: cover
+			position: relative
+			height: 100%
+	.swiper-caption
+		position: absolute
+		bottom: 120px
+		left: 50%
+		z-index: 11
+		transform: translateX(-50%)
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-flow: column
+		width: 100%
+		&:after
+			content: ''
+			display: block
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: -20px
+			width: 100px
+			height: 10px
+			background: url('../img/banner/wave.png')
+		.title
+			font-size: 60px
+			font-weight: 700
+			font-style: italic
+			color: #ffffff
+			font-family: 'Playfair Display'
+			text-shadow: 0px 0px 10px rgba(255, 255, 255, 1)
+		.caption
+			font-size: 30px
+			font-weight: 200
+			color: #ffffff
+			text-transform: uppercase
+			text-shadow: 0px 0px 4px rgba(255, 255, 255, 1)
+		@media screen and(max-width:1600px)
+			bottom: 50px
+			.title
+				font-size: 45px
+			.caption
+				font-size: 25px
+
+	.next-section-arrow
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 20px
+		z-index: 11
+		a
+			text-decoration: none
+			em
+				font-size: 40px
+				color: #ffffff
+		@media screen and(max-width:1600px)
+			bottom: 0
+		@media screen and(max-width:1200px)
+			bottom: 0
+		@media screen and(max-width:1025px)
+			display: none
+	@media screen and(max-width:1200px)
+		.swiper-container
+			height: 576px
+		.swiper-media
+			height: 576px
+			width: auto
+			img,video
+				width: 100%
+				height: 100%
+				object-fit: cover
+	@media screen and(max-width:768px)
+		.swiper-container
+			height: 425px
+		.swiper-caption
+			bottom: 30px
+			&:after
+				top: -10px
+			.title
+				font-size: 30px
+			.caption
+				font-size: 20px
+	@media screen and(max-width:576px)
+		.swiper-container
+			height: 400px
+		.swiper-caption
+			padding: 0 16px
+			text-align: center
+			.title
+				font-size: 28px
+			.caption
+				font-size: 18px
+
+
+

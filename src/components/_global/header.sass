@@ -1,0 +1,499 @@
+header
+	position: fixed
+	top: 0
+	width: 100vw
+	z-index: 1003
+	padding: 10px 0 20px 0
+	background: url('../img/header/bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	@media screen and(max-width:1600px)
+		height: 110px
+	@media screen and(max-width:1025PX)
+		background: #005D77
+		padding: 10px 0 0 0
+		height: 60px
+	@media screen and(max-width:576px)
+		
+	.header-bottom
+		@media screen and(max-width:1600px)
+			margin-top: -10px
+	.header-top
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		@media screen and(max-width:1025px)
+			justify-content: flex-start
+			flex-flow: column-reverse
+			.social-network,.hot-line-wrapper
+				margin-top: 10px
+			
+		.social-network,.ModuleContent
+			
+			display: flex
+			justify-content: center
+			align-items: center
+			.social-icon
+				margin-right: 20px
+				em
+					font-size: 20px 
+					color: $yl
+		.hot-line-wrapper
+			a
+				background: linear-gradient(90deg, #c5a95c 0%, #b6a561 18%, #618e7d 55%, #137a97 100%)
+				text-decoration: none
+				padding: 0 25px
+				border: 1px solid #ffffff
+				border-radius: 20px
+				*
+					color: #ffffff
+					font-weight: 500
+					font-size: 16px
+				em
+					font-size: 20px
+					margin-right: 8px 
+					color: #ffffff
+					
+			@media screen and(max-width:1025px)
+				opacity: 0
+				a
+					padding: 1px 16px
+					em
+						font-size: 16px
+					*
+						font-size: 15px
+	.header-navigation-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@media screen and(max-width:1024.5px)
+			justify-content: normal
+	.navbrand
+		cursor: pointer
+		position: relative
+		margin-bottom: -55px
+		background: #085d76
+		border-radius: 50%
+		width: 125px
+		height: 125px
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: height .25s ease, width .25s ease
+		&:before,&:after
+			content: ''
+			display: block
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0 
+			left: 0
+			border-radius: 50%
+			border: 10px solid rgba(#085d76,.3)
+		&:before
+			animation: ripple 1s linear infinite
+		&:after
+			animation: ripple 2s linear 1s infinite
+		.logo
+			display: flex
+			justify-content: center
+			align-items: center
+			.ModuleContent
+				display: flex
+				justify-content: center
+				align-items: center
+			img
+				max-width: 90%
+				height: auto
+
+		@media screen and(max-width:1025px)
+			display: none
+			margin: 0
+			width: 60px
+			height: 60px
+			background: none
+			&:before,&:after
+				display: none
+			.logo
+				img
+					width: 100%
+	.header-home-icon
+		a
+			position: relative
+			&:after
+				content: ''
+				position: absolute
+				display: inline-block
+				background-image: url(../img/active.png)
+				width: 24px
+				height: 5px
+				left: 50%
+				transform: translateX(-50%)
+				bottom: -12px
+				opacity: 0
+			&.active
+				opacity: 1
+		
+		@media screen and(max-width:1025px)
+			display: none
+	.mobile-toggle
+		display: none
+		@media screen and(min-width:1025px)
+			display: none
+	.search-toggle
+		position: relative
+		display: none
+		justify-content: center
+		align-items: center
+		width: 32px
+		height: 32px
+		&:after
+			font-family: 'Material Design Icons'
+			content: '\f349'
+			font-size: 20px
+			display: block
+			position: absolute
+			left: 0
+			bottom: 0
+			height: 32px
+			width: 32px
+			color: $yl
+			background: none
+		@media screen and(max-width:1600px)
+			margin-left: 16px
+			display: none
+		@media screen and(max-width:1025px)
+			margin-top: 10px
+			display: none
+	.searchbox
+		position: absolute
+		display: none
+		justify-content: center
+		align-items: center
+		position: relative
+		bottom: 6px
+		
+		input
+			padding: 0 16px
+			position: absolute
+			top: 32px
+			height: 31px
+			right: 0
+			display: none
+		button
+			color: #ffffff
+			background: $yl
+			width: 32px
+			height: 30px
+			border: none
+			position: absolute
+			top: 32px
+			right: 0
+			display: none
+			&:focus
+				outline: none
+		@media screen and(max-width:1025px)
+			display: none
+			position: static
+			input
+				position: static
+				height: 30px
+			button
+				position: static
+				margin-left: -6px
+		@media screen and(max-width:768px)
+
+
+
+
+
+
+
+
+
+
+	// .searchbox
+	// 	position: relative
+	// 	height: 32px
+	// 	width: 32px
+	// 	transition: .3s all ease-in-out
+	// 	@media screen and(max-width:1600px)
+	// 		margin-left: 16px
+	// 	@media screen and(max-width:1200px)
+	// 		margin-left: 0
+	// 	&:hover
+	// 		input
+	// 			pointer-events: auto
+	// 			opacity: 1
+	// 			width: 200px
+	// 		.searchbutton
+	// 			background: #c5a95c
+	// 			em
+	// 				color: #ffffff
+	// 	input
+	// 		position: absolute
+	// 		bottom: -28px
+	// 		right: 0
+	// 		transition: all .8s cubic-bezier(0.98, -0.55, 0.665, 1.55)
+	// 		opacity: 0
+	// 		pointer-events: none
+	// 		width: 0
+	// 		padding: 0 16px
+	// 		font-size: 16px
+	// 		color: #333333
+	// 	@media screen and(max-width:1025px)
+	// 		&:hover
+	// 			margin-right: 140px
+	// 			.searchbutton
+	// 				margin-right: 32px
+	// 		input
+	// 			position: static
+	// 			padding: 2px 16px
+	// 	.searchbutton
+	// 		transition: .3s all ease-in-out
+	// 		position: absolute
+	// 		top: 0
+	// 		width: 32px
+	// 		height: 100%
+	// 		background: none
+	// 		right: 0
+	// 		border: none
+	// 		color: $yl
+	// 		&:focus
+	// 			outline: none
+	// 		em
+	// 			font-size: 18px
+	// 			color: $yl
+	.language-wrapper
+		margin: 0 0
+
+		@media screen and(max-width:1025px)
+			display: none
+			margin-left: auto
+			margin-right: 20px
+		.language-list
+			list-style-type: none
+			padding: 0
+			margin: 0
+			li
+				text-transform: uppercase
+				display: inline-block
+				transition: .3s all ease-in-out
+				&.active
+					span,a
+						color: #ff0000
+				&:hover
+					a
+						color: #a1b0bd
+				a
+					transition: .3s all ease-in-out
+					text-decoration: none
+					color: $yl
+					font-weight: 400
+				span
+					position: relative
+					z-index: 10
+					padding: 0 
+					line-height: 22px
+					font-weight: 400
+					color: $yl
+			.has-sub
+				position: relative
+				&:hover
+					span,a
+						color: $yl
+						z-index: 119
+					.nav-sub
+						left: -16px
+						padding: 16px 30px 0 30px 
+						opacity: 1
+						filter: none
+						transition: opacity .3s ease,z-index .3s ease .1s
+						li
+							display: flex
+							justify-content: center
+							align-items: center
+							line-height: 50px
+							display: block
+							a
+								display: flex
+								justify-content: center
+								align-items: center
+								color: #ffffff
+							&:hover
+								a
+									color: #a1b0bd
+				span,a
+					position: relative
+				span
+					&:after
+						bottom: 0
+				ul
+					max-height: 500px
+					position: absolute
+					left: 0
+					top: 10px
+					width: 120%
+					margin-left: -10%
+					z-index: 118
+					overflow: hidden
+					background: $blue
+					opacity: 0
+					transition: opacity .3s ease,max-height .3s ease .3s
+					li
+						display: none
+						text-align: center
+						padding: 0
+						line-height: 50px
+						margin: 0
+						a
+							color: #ffffff
+							transition: all .3s ease 0s
+	.navigation-header-1
+		li
+			a
+				padding: 4px 28px
+				
+	.navigation-header-2
+		li
+			a
+				padding: 4px 24px
+	@media screen and(max-width:1600px)
+		.navigation-header-1
+			li
+				a
+					padding: 4px 29px
+		.navigation-header-2
+			li
+				a
+					padding: 4px 12px
+	@media screen and(max-width:1200px)
+		.navigation-header-1
+			li
+				a
+					padding: 4px 18px
+		.navigation-header-2
+			li
+				a
+					padding: 4px 12px
+	.navigation-wrapper
+		position: relative
+		padding: 0
+		margin: 0
+		list-style-type: none
+		li
+			position: relative
+			display: inline-block
+			a
+				font-size: 16px
+				color: #ffffff
+				font-weight: 400
+				text-transform: uppercase
+				text-decoration: none
+				color: $yl
+				&:after
+					transition: opacity .3s ease-in-out
+					opacity: 0
+					content: ''
+					position: absolute
+					display: inline-block
+					background-image: url(../img/active-1.png)
+					width: 70%
+					height: 5px
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -12px
+			&:hover
+				a
+					&:after
+						opacity: 1
+			&.active
+				position: relative
+				&:after
+					opacity: 1
+					content: ''
+					position: absolute
+					display: inline-block
+					background-image: url(../img/active-1.png)
+					width: 70%
+					height: 5px
+					transform: translateX(-50%)
+					left: 50%
+					transform: translateX(-50%)
+					bottom: -12px
+			@media screen and(max-width:1025px)
+				a
+					&:after
+						bottom: 0
+				&.active
+					&:after
+						bottom: 0
+
+		@media screen and(max-width:1600px)
+			li
+				a
+					font-size: 15px
+		@media screen and(max-width:1200px)
+			li
+				a
+					font-size: 13px
+		@media screen and(max-width:1025px)
+			opacity: 0
+			li
+				display: block
+	.mobile-wrapper
+		opacity: 0
+		@media screen and(max-width:1025px)
+			background: #005D77
+			top: 60px
+			display: flex
+			justify-content: flex-start
+			align-items: center
+			flex-flow: column
+			height: 100vh
+			z-index: 116
+			pointer-events: none
+			position: fixed
+			right: 0
+			opacity: 0
+			width: 0
+			width: 0
+			transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+			&.active
+				pointer-events: auto
+				opacity: 1
+				width: 100%
+			ul
+				text-align: center
+				li
+					padding: 8px 20px
+		.navigation-wrapper
+			opacity: 1 !important
+		.hot-line-wrapper
+			opacity: 1 !important
+	
+@-webkit-keyframes ripple
+	0%
+		-webkit-transform: scale(1)
+
+	75%
+		-webkit-transform: scale(1.75)
+		opacity: 1
+
+	100%
+		-webkit-transform: scale(2)
+		opacity: 0
+
+
+@keyframes ripple
+	0%
+		transform: scale(1)
+
+	75%
+		transform: scale(1.75)
+		opacity: 1
+
+	100%
+		transform: scale(2)
+		opacity: 0

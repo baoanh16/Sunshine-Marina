@@ -1,0 +1,12 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'home-page'
+
+block main
+	include ../components/top-banner/index.pug
+	include ../components/breadcrumb/index.pug
+	include ../components/tin-tuc-ds/index.pug
+	include ../components/pagination/index.pug
+

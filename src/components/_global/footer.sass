@@ -1,0 +1,224 @@
+.contact-form
+	background: url('../img/form/bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding: 50px 0
+	position: relative
+	.back-to-top
+		position: absolute
+		top: -25px
+		left: 50%
+		transform: translateX(-50%)
+		button
+			border: none
+			background: #c9aa5b
+			border-radius: 50%
+			width: 50px
+			height: 50px
+			display: flex
+			justify-content: center
+			align-items: center
+			&:focus
+				outline: none
+	@media screen and(max-width:1025px)
+		padding: 30px 0
+	.partner-logo
+		a
+			padding-top: 30px
+			display: flex
+			justify-content: flex-start
+			align-items: flex-end
+		p
+			font-size: 14px
+			font-weight: 200
+			color: #ffffff
+			padding-right: 20px
+			img
+				max-width: 100%
+				height: auto
+	.frm-btn-reset
+		display: none
+	.contact-form-title
+		h2
+			text-align: center
+			color: #ffffff
+			font-size: 36px
+			font-weight: 600
+			padding-bottom: 50px
+			span
+				color: #2c378f
+		@media screen and(max-width:1025px)
+			h2
+				font-size: 30px
+				padding-bottom: 30px
+	.frm-btnwrap
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	.form-group
+		padding: 4px 10px
+		span
+			display: none
+		label
+			font-size: 14px
+			color: #ffffff
+			font-weight: 400
+		span
+			font-style: italic
+			font-size: 14px
+			color: #ff1212
+		input,textarea
+			border: 1px solid rgba(#649fa7,.4)
+			width: 100%
+			padding: 8px 30px
+			color: #ffffff
+			border-radius: 5px
+			font-size: 14px
+			line-height: 20px
+			background: rgba(#000000,.3)
+			&:focus
+				outline: none
+	.frm-btn
+		margin-top: 16px
+		vertical-align: middle
+		transform: perspective(1px) translateZ(0)
+		transition-duration: .3s
+		transition-property: transform
+		margin-bottom: 15px
+		cursor: pointer
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		padding: 4px 40px
+		border-radius: 5px
+		background: none
+		color: $yl
+		transition: .3s all ease-in-out
+		border: 1px solid $yl
+		display: inline-block
+		vertical-align: middle
+		-webkit-transform: perspective(1px) translateZ(0)
+		transform: perspective(1px) translateZ(0)
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+		position: relative
+		-webkit-transition-property: color
+		transition-property: color
+		-webkit-transition-duration: 0.5s
+		transition-duration: 0.5s
+		&:before
+			content: ""
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: $yl
+			-webkit-transform: scaleX(0)
+			transform: scaleX(0)
+			-webkit-transform-origin: 0 50%
+			transform-origin: 0 50%
+			-webkit-transition-property: transform
+			transition-property: transform
+			-webkit-transition-duration: 0.5s
+			transition-duration: 0.5s
+			-webkit-transition-timing-function: ease-out
+			transition-timing-function: ease-out
+		&:hover
+			input[type='submit']
+				color: white
+			&:before
+				-webkit-transform: scaleX(1)
+				transform: scaleX(1)
+				-webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+				transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66)
+		input[type='submit']
+			padding: 0
+			text-transform: uppercase
+			border: none
+			color: $yl
+			background: none
+			&:focus
+				outline: none
+		em
+			padding-left: 8px
+			color: #fff
+			font-size: 16px
+	@media screen and(max-width:1025px)
+		padding-bottom: 20px
+	@media screen and(max-width: 576px)
+		.form-group
+			padding:  4px 15px
+			input,textarea
+				padding: 8px 16px
+	@media screen and(max-width: 450px)
+		.form-group
+			input,textarea
+				padding: 8px 16px
+.contact-information-wrapper
+	h3
+		color: #e6d6ad
+		font-size: 24px
+		font-weight: 400
+		line-height: 32px
+		padding-bottom: 16px
+		@media screen and(max-width:768px)
+			font-size: 21px
+	h4
+		color: #ffffff
+		font-family: 'Playfair Display'
+		font-size: 18px
+		font-style: italic
+		font-weight: 400
+		line-height: 25px
+		padding-bottom: 26px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			display: block
+			padding: 15px 0
+			border-bottom: dashed
+			border-bottom-width: 1px
+			border-bottom-color: rgba(#ffffff,.3)
+			a
+				text-decoration: none
+				color: #ffffff
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				p
+					margin-left: 16px
+	
+	@media screen and(max-width:1600px)
+		h3
+			padding-bottom: 10px
+		h4
+			padding-bottom: 16px
+		ul
+			li
+				padding: 10px 0
+
+.wrap-form
+	@media screen and(max-width:1025px)
+		margin-top: 30px
+
+.copy-right
+	height: 59px
+	background: #ffffff
+	display: flex
+	justify-content: center
+	align-items: center
+	h2
+		text-align: center
+		font-size: 14px
+		color: #636466
+		font-weight: 400
+	@media screen and(max-width:1600px)
+		height: 40px
+#ctl00_mdl146_ctl00_pnlQuestions
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px

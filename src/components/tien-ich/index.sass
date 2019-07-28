@@ -1,0 +1,183 @@
+.ss-maria-convenient
+	overflow: hidden
+	background: url('../img/convenient/bg-2.png')
+	background-repeat: no-repeat
+	padding: 80px 0 60px 0
+	background-size: cover
+	@media screen and(max-width:1025px)
+		padding: 50px 0 40px 0
+	@media screen and(max-width:576px)
+		padding: 40px 0 10px 0
+.convenient-display-wrapper
+	padding-top: 25px
+	figure
+		margin-bottom: 30px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-wrap: wrap
+		flex: 0 0 100%
+		&:nth-child(odd)
+			position: relative
+			margin-left: -225px
+			figcaption
+				margin-right: -225px
+				h3
+					&:before
+						left: -170px
+		&:nth-child(even)
+			position: relative
+			flex-direction: row-reverse
+			margin-left: 225px
+			figcaption
+				text-align: right
+				margin-left: -225px
+				h3
+					&:before
+						right: -150px
+		
+		.figure-image
+			flex: 0 0 calc(45% + 200px)
+			height: 440px
+			width: auto
+			img
+				border-top-left-radius: 80px
+				border-bottom-right-radius: 80px
+				width: 100%
+				height: 100%
+				object-fit: cover
+		figcaption
+			position: relative
+			flex: 0 0 50% 
+			*
+				color: #333333
+				font-weight: 200
+				font-family: 'Montserrat'
+				font-family: 16px
+				line-height: 24px
+			h3
+				margin-bottom: 25px
+				font-size: 30px
+				line-height: 38px
+				font-weight: 700
+				font-family: 'Playfair Display'
+				position: relative
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					bottom: 16px
+					width: 140px
+					height: 2px
+					background: #c9aa5b
+			p
+				font-weight: 200
+				font-family: 'Montserrat'
+				font-family: 16px
+				line-height: 24px
+	@media screen and(max-width:1600px)
+		figure
+			&:nth-child(odd)
+				margin-left: -35px
+				figcaption
+					margin-right: -35px
+					h3
+						&:before
+							left: -170px
+			&:nth-child(even)
+				margin-left: 35px
+				figcaption
+					margin-left: -35px
+	
+			.figure-image
+				flex: 0 0 calc(45% + 35px)
+				height: 320px
+				img
+					border-top-left-radius: 50px
+					border-bottom-right-radius: 50px
+			figcaption
+				h3
+					font-size: 26px
+					margin-bottom: 16px
+					line-height: 32px
+	@media screen and(max-width:1200px)
+		figure
+			&:nth-child(odd)
+				margin-left: 0
+				figcaption
+					margin-right: 0
+					h3
+						&:before
+							left: -100px
+			&:nth-child(even)
+				margin-left: 0
+				figcaption
+					margin-left: 0
+					h3
+						&:before
+							right: -100px
+			.figure-image
+				flex: 0 0 45%
+				height: 320px
+				img
+					border-top-left-radius: 50px
+					border-bottom-right-radius: 50px
+			figcaption
+				h3
+				
+					&:before
+						width: 90px
+				*
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					font-size: 15px
+	@media screen and(max-width:1025px)
+		figure
+			&:nth-child(odd)
+				margin-left: -35px
+				figcaption
+					margin-right: -35px
+			&:nth-child(even)
+				margin-left: 35px
+				figcaption
+					margin-left: -35px
+			.figure-image
+				flex: 0 0 calc(45% + 35px)
+				height: 250px
+				img
+					border-top-left-radius: 30px
+					border-bottom-right-radius: 30px
+	@media screen and(max-width:768px)
+		figure
+			.figure-image
+				height: 200px
+	@media screen and(max-width:576px)
+		figure
+			flex-flow: column
+			margin-bottom: 0
+			.figure-image
+				height: 220px
+			&:nth-child(odd)
+				margin-left: 0
+				figcaption
+					margin-right: 0
+					h3
+						&:before
+							left: -100px
+			&:nth-child(even)
+				margin-left: 0
+				figcaption
+					text-align: left
+					margin-left: 0
+			&:nth-child(even)
+				flex-direction: column
+			figcaption
+				text-align: left
+				h3
+					font-size: 18px
+					margin: 10px 0
+					line-height: 27px
+				*
+					line-height: 20px

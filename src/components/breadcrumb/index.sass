@@ -1,0 +1,70 @@
+.global-breadcrumb
+	position: relative
+	z-index: 1
+	height: 40px
+	margin-top: -40px
+	padding: 10px 0
+	background: rgba(#000000,.5)
+	ol
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-flex
+			font-size: 16px
+			line-height: 23px
+			padding-right: 30px
+			position: relative
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				right: 8px
+				bottom: 2px
+				width: 2px
+				height: 18px
+				background: #ffffff
+			&.active
+			&:first-child
+				span
+					display: none
+				&:after
+					bottom: -3px
+				a
+					display: inline
+					width: 16px
+					position: relative
+					&:before
+						font-family: 'Material Design Icons'
+						content: '\f2dc'
+						font-size: 20px
+						color: #ffffff
+						position: absolute
+						width: 1px
+						bottom: -5px
+						left: 0
+			&:last-child
+				&:after
+					display: none
+			&.active
+				color: #ffffff
+			a
+				text-decoration: none
+				font-size: 16px
+				line-height: 23px
+				color: #ffffff
+	@media screen and(max-width: 1200px)
+		padding: 10px 0
+		margin-bottom: 30px
+	@media screen and(max-width: 768px)
+		margin-bottom: 20px
+		padding: 8px 0
+	@media screen and(max-width: 576px)
+		.breadcrumb
+			li
+				font-size: 14px
+				line-height: 22px
+				a
+					font-size: 13px
+					line-height: 22px
+					span
+						font-size: 13px

@@ -1,0 +1,193 @@
+.ss-maria-media
+	padding: 80px 0
+	background: url('../img/news/bg.png')
+	background-repeat: no-repeat
+	background-size: cover
+	@media screen and(max-width:1025px)
+		padding: 50px 0
+	@media screen and(max-width:768px)
+		padding: 40px 0
+.ss-maria-news
+	@media screen and(max-width:1025px)
+		margin-bottom: 50px
+.watch-more
+	margin-left: auto
+	a
+		font-style: normal
+		font-size: 16px
+		color: #333333
+		font-family: 'Montserrat'
+.news-wrapper
+	display: flex
+	flex-wrap: wrap
+	.news-item
+		z-index: 12
+		overflow: hidden
+		flex: 0 0 calc(50% -15px)
+		border-top-left-radius: 30px
+		border-bottom-right-radius: 30px
+		box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1)
+		&:nth-child(3)
+			margin-left: 15px
+		&:nth-child(2)
+			margin-right: 15px
+		&.big
+			margin-bottom: 30px
+			padding: 0 0
+			flex: 0 0 100%
+			border-top-left-radius: 50px
+			box-shadow: 0px 5px 50px 0px rgba(0, 0, 0, 0.1)
+			border-bottom-right-radius: 50px
+			.news-image
+				height: 385px
+				img
+					border-top-left-radius: 50px
+			.news-caption
+				.dash-color
+					height: 5px
+				.caption
+					border-bottom-right-radius: 50px
+					padding: 25px
+					*
+						font-size: 16px
+						display: -webkit-box
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+		.news-image
+			position: relative
+			width: auto
+			height: 200px
+			z-index: -1
+			border-top-left-radius: 30px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-top-left-radius: 30px
+		.news-caption
+			position: relative
+			margin-top: -60px
+			z-index: 1
+			.dash-color
+				margin: 0 0
+				height: 3px
+				color: #d0b160
+				background-color: #d0b160
+				border: none
+			time
+				padding: 6px 25px
+				background: #d0b160
+				font-size: 12px
+				font-weight: 400
+				color: #ffffff
+				letter-spacing: 16px*.0625
+			.caption
+				border-bottom-right-radius: 30px
+				background: #ffffff
+				padding: 16px
+				a
+					text-decoration: none
+				*
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					font-size: 14px
+					font-weight: 500
+					color: #333333
+	@media screen and(max-width:1025px)
+		.news-item
+			&.big
+				.news-image
+					height: 330px
+	@media screen and(max-width:576px)
+		.news-item
+			margin-bottom: 30px
+			flex: 0 0 100%
+			&:nth-child(3)
+				margin-left: 0
+			&.big
+				.news-image
+					height: 250px
+.library-wrapper
+	margin-top: 10px
+	display: flex
+	flex-wrap: wrap
+	.library-item
+		padding: 5px
+		flex: 0 0 50%
+		&:first-child
+			flex: 0 0 100%
+			.wrapper
+				height: 330px
+		&:last-child
+			flex: 0 0 100%
+			.wrapper
+				height: 220px
+				position: relative
+		&:not(:first-child)
+	@media screen and(max-width:576px)
+		.library-item
+			&:first-child
+				.wrapper
+					height: 250px
+	.play
+		height: 100%
+		position: relative
+		&__icon
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			position: absolute
+			z-index: 1
+			background: url('../img/news/play.png')
+			background-size: cover
+			background-repeat: no-repeat
+			height: 70px
+			width: 70px
+			pointer-events: none
+	.play-icon
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			z-index: 1
+			left: 50%
+			top: 50%
+			transform: translate(-50%,-50%)
+			width: 80px
+			height: 80px
+			background: rgba(#ffffff,.7)
+			border-radius: 50%
+			pointer-events: none
+		&:after
+			z-index: 0
+			background: none
+			content: '\f40a'
+			font-family: 'Material Design Icons'
+			font-size: 62px
+			display: block
+			position: absolute
+			left: 50%
+			top: 50%
+			pointer-events: none
+			transform: translate(-50%,-50%)
+	video
+		position: relative
+	.wrapper
+		height: 170px
+		width: auto
+		@media screen and(max-width:576px)
+			height: 150px
+		img,video
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.lightgallery
+		position: relative
+	
+		a
+			&:not(:first-child)
+				display: none
