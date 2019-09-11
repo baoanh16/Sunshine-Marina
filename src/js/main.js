@@ -1,44 +1,22 @@
 $(document).ready(function() {
-	$(document).on("scroll", onScroll);
-	if ($(window).width() < 1025) {
-		$(".navbrand").fadeIn(function() {
-			$(".navbrand").css({
-				display: "flex"
-			});
-		});
-		$(".language-wrapper").fadeIn(function() {
-			$(".language-wrapper").css({
-				display: "flex"
-			});
-		});
-		$(".mobile-toggle").fadeIn(function() {
-			$(".mobile-toggle").css({
-				display: "flex"
-			});
-		});
-		$(".searchbox").fadeIn(function() {
-			$(".mobile-toggle").css({
-				display: "flex"
-			});
-		});
-	}
-
 	$(".search-toggle").on("click", function() {
 		$(".searchbox").fadeToggle();
 	});
-	mappingMenu1();
-	mappingMenu2();
+	onResizeHideElement();
+	// mappingMenu1();
+	// mappingMenu2();
+	// mappingHotLine();
+	// mappingSocial();
 
 	swiperInit();
-	mappingSearchBox();
-	mappingSearchBox2();
-	mappingContact();
+	// mappingSearchBox();
+	// mappingSearchBox2();
+
 	mobileHeaderToggle();
 	tabActive();
 	menuActive();
 	backToHome();
 	navigationToHome();
-	onScroll();
 	//Scroll to top
 	let btnTopScroll = $(".back-to-top");
 	btnTopScroll.on("click", function(e) {
@@ -82,29 +60,6 @@ $(document).ready(function() {
 	});
 	//Library Init
 
-	//Scroll active
-
-	function onScroll(event) {
-		var scrollPos = $(document).scrollTop() + 250;
-		$(".header-navigation-wrapper ul.navigation-wrapper a").each(
-			function() {
-				var currLink = $(this);
-				var refElement = $(currLink.attr("href"));
-				if (
-					refElement.position().top <= scrollPos &&
-					refElement.position().top + refElement.height() > scrollPos
-				) {
-					$(
-						".header-navigation-wrapper ul.navigation-wrapper li"
-					).removeClass("active");
-					currLink.parent().addClass("active");
-				} else {
-					currLink.parent().removeClass("active");
-				}
-			}
-		);
-	}
-
 	AOS.init({
 		disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 		startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
@@ -123,7 +78,13 @@ $(document).ready(function() {
 	$(".lightgallery").lightGallery();
 	// particleJS();
 });
-window.onresize = function(event) {
+$(document).on("scroll", onScrollSection);
+$(window).resize(function() {
+	onResizeHideElement();
+});
+
+// On resize hide element
+function onResizeHideElement() {
 	if ($(window).width() < 1025) {
 		$(".navbrand").fadeIn(function() {
 			$(".navbrand").css({
@@ -145,9 +106,35 @@ window.onresize = function(event) {
 				display: "flex"
 			});
 		});
+	} else if ($(window).width() > 1024) {
+		$(".mobile-toggle").fadeIn(function() {
+			$(".mobile-toggle").css({
+				display: "none"
+			});
+		});
 	}
-};
+}
+//Scroll active
 
+function onScrollSection(event) {
+	var scrollPos = $(document).scrollTop() + 250;
+	$(".header-navigation-wrapper ul.navigation-wrapper a").each(function() {
+		var currLink = $(this);
+		var refElement = $(currLink.attr("href"));
+		if (
+			refElement.position().top <= scrollPos &&
+			refElement.position().top + refElement.height() > scrollPos
+		) {
+			$(
+				".header-navigation-wrapper ul.navigation-wrapper li"
+			).removeClass("active");
+			currLink.parent().addClass("active");
+		} else {
+			currLink.parent().removeClass("active");
+		}
+	});
+}
+//Back to Home
 function backToHome() {
 	$(".header-home-icon").on("click", function() {
 		let home = window.location.origin;
@@ -165,7 +152,7 @@ function navigationToHome() {
 			function() {
 				let home = window.location.origin;
 				let href = $(this).attr("href");
-				window.location.replace(home + "/" + href);
+				window.location.replace(home + href);
 			}
 		);
 	}
@@ -176,7 +163,7 @@ function navigationToHomeMobile() {
 		$(".mobile-wrapper ul.navigation-wrapper li a").click(function() {
 			let home = window.location.origin;
 			let href = $(this).attr("href");
-			window.location.replace(home + "/" + href);
+			window.location.replace(home + href);
 		});
 	}
 }
@@ -221,7 +208,7 @@ function removeActiveForm() {
 
 function mappingMenu1() {
 	return new MappingListener({
-		selector: ".navigation-header-1",
+		selector: ".Module-166",
 		mobileWrapper: ".mobile-wrapper",
 		mobileMethod: "appendTo",
 		desktopWrapper: ".header-home-icon",
@@ -232,7 +219,7 @@ function mappingMenu1() {
 
 function mappingMenu2() {
 	return new MappingListener({
-		selector: ".navigation-header-2",
+		selector: ".Module-167",
 		mobileWrapper: ".mobile-wrapper",
 		mobileMethod: "appendTo",
 		desktopWrapper: ".navbrand",
@@ -261,12 +248,22 @@ function mappingSearchBox2() {
 		breakpoint: 1025
 	}).watch();
 }
-function mappingContact() {
+function mappingHotLine() {
 	return new MappingListener({
-		selector: ".header-top",
+		selector: ".hot-line-wrapper",
+		mobileWrapper: ".navbrand",
+		mobileMethod: "insertAfter",
+		desktopWrapper: ".header-top",
+		desktopMethod: "appendTo",
+		breakpoint: 1025
+	}).watch();
+}
+function mappingSocial() {
+	return new MappingListener({
+		selector: ".social-network",
 		mobileWrapper: ".mobile-wrapper",
 		mobileMethod: "appendTo",
-		desktopWrapper: ".header-bottom",
+		desktopWrapper: ".hot-line-wrapper",
 		desktopMethod: "insertBefore",
 		breakpoint: 1025
 	}).watch();

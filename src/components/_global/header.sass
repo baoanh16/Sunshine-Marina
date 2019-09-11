@@ -17,6 +17,7 @@ header
 	@media screen and(max-width:576px)
 		
 	.header-bottom
+		margin-top: -10px
 		@media screen and(max-width:1600px)
 			margin-top: -10px
 	.header-top
@@ -28,9 +29,7 @@ header
 			flex-flow: column-reverse
 			.social-network,.hot-line-wrapper
 				margin-top: 10px
-			
 		.social-network,.ModuleContent
-			
 			display: flex
 			justify-content: center
 			align-items: center
@@ -39,62 +38,80 @@ header
 				em
 					font-size: 20px 
 					color: $yl
-		.hot-line-wrapper
+	.social-network
+		.ModuleContent
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: row
+		.social-icon
+			margin-right: 20px
+			em
+				font-size: 20px 
+				color: $yl
+		@media screen and(max-width:1025px)
+			margin-top: 20px
+			.social-icon
+				&:last-child
+					margin: 0
+	.hot-line-wrapper
+		a
+			background: linear-gradient(90deg, #c5a95c 0%, #b6a561 18%, #618e7d 55%, #137a97 100%)
+			text-decoration: none
+			padding: 0 25px
+			border: 1px solid #ffffff
+			border-radius: 20px
+			*
+				color: #ffffff
+				font-weight: 500
+				font-size: 16px
+			em
+				font-size: 20px
+				margin-right: 8px 
+				color: #ffffff
+				
+		@media screen and(max-width:1025px)
+			opacity: 1
+			margin: 0 auto
 			a
-				background: linear-gradient(90deg, #c5a95c 0%, #b6a561 18%, #618e7d 55%, #137a97 100%)
-				text-decoration: none
-				padding: 0 25px
-				border: 1px solid #ffffff
-				border-radius: 20px
-				*
-					color: #ffffff
-					font-weight: 500
-					font-size: 16px
+				padding: 3px 16px
 				em
-					font-size: 20px
-					margin-right: 8px 
-					color: #ffffff
-					
-			@media screen and(max-width:1025px)
-				opacity: 0
-				a
-					padding: 1px 16px
-					em
-						font-size: 16px
-					*
-						font-size: 15px
+					font-size: 16px
+				*
+					font-size: 15px
+		@media screen and(max-width:576px)
+			a
+				padding: 2px 16px
 	.header-navigation-wrapper
 		display: flex
 		justify-content: space-between
 		align-items: center
 		@media screen and(max-width:1024.5px)
 			justify-content: normal
+		.hot-line-wrapper
+			
 	.navbrand
 		cursor: pointer
 		position: relative
-		margin-bottom: -55px
-		background: #085d76
-		border-radius: 50%
-		width: 125px
-		height: 125px
+		margin-bottom: 0
 		display: flex
 		justify-content: center
 		align-items: center
 		transition: height .25s ease, width .25s ease
-		&:before,&:after
-			content: ''
-			display: block
-			position: absolute
-			top: 0
-			right: 0
-			bottom: 0 
-			left: 0
-			border-radius: 50%
-			border: 10px solid rgba(#085d76,.3)
-		&:before
-			animation: ripple 1s linear infinite
-		&:after
-			animation: ripple 2s linear 1s infinite
+		// &:before,&:after
+		// 	content: ''
+		// 	display: block
+		// 	position: absolute
+		// 	top: 0
+		// 	right: 0
+		// 	bottom: 0 
+		// 	left: 0
+		// 	border-radius: 50%
+		// 	border: 10px solid rgba(#085d76,.3)
+		// &:before
+		// 	animation: ripple 1s linear infinite
+		// &:after
+		// 	animation: ripple 2s linear 1s infinite
 		.logo
 			display: flex
 			justify-content: center
@@ -141,6 +158,8 @@ header
 		display: none
 		@media screen and(min-width:1025px)
 			display: none
+		@media screen and(max-width:1025px)
+			margin-bottom: -10px
 	.search-toggle
 		position: relative
 		display: none
@@ -270,7 +289,6 @@ header
 
 		@media screen and(max-width:1025px)
 			display: none
-			margin-left: auto
 			margin-right: 20px
 		.language-list
 			list-style-type: none
@@ -363,7 +381,7 @@ header
 		.navigation-header-1
 			li
 				a
-					padding: 4px 29px
+					padding: 4px 17px
 		.navigation-header-2
 			li
 				a
@@ -457,6 +475,7 @@ header
 			position: fixed
 			right: 0
 			opacity: 0
+
 			width: 0
 			width: 0
 			transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55)

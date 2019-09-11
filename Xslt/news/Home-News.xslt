@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-	
+
 	<xsl:template match="/">
-		
+
 		<section class="ss-maria-news">
 			<div class="article-title-b" data-aos="fade-zoom-in" data-aos-easing="ease-in-back" data-aos-delay="600" data-aos-offset="0">
 				<h2>
@@ -11,7 +11,15 @@
 					<span class="blue-line-short"></span>
 				</h2>
 				<div class="watch-more">
-					<a href="tin-tuc-3">Xem tất cả</a>
+					<a>
+						<xsl:attribute name="href">
+							<xsl:value-of disable-output-escaping="yes" select="/NewsList/ZoneUrlSelected"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="title">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:value-of disable-output-escaping="yes" select="/NewsList/ViewAllText"></xsl:value-of>
+					</a>
 				</div>
 			</div>
 			<div class="news-wrapper" data-aos="fade-right" data-aos-offset="250" data-aos-delay="200" data-aos-duration="700" data-aos-easing="ease-in-out">
@@ -28,11 +36,11 @@
 				<a>
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
-						
+
 					</xsl:attribute>
 					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
-						
+
 					</xsl:attribute>
 					<img>
 						<xsl:attribute name="src">

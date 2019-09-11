@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-	
+
 	<xsl:template match="/">
-		
-		<section class="ss-maria-structure" id="thiet-ke">
+
+		<section class="ss-maria-structure" id="section-3">
 			<div class="article-title-w center" data-aos="zoom-in-up" data-aos-offset="150" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">
 				<h2>
 					<xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 	</xsl:template>
-	
+
 </xsl:stylesheet>

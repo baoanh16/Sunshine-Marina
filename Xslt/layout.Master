@@ -34,6 +34,7 @@
 	<link
 		href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900|Playfair+Display:400,400i,700,700i,900,900i&amp;display=swap&amp;subset=vietnamese"
 		rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css">
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
 		JQueryUIThemeName="smoothness" />
 	<portal:Favicon ID="Favicon1" runat="server" />
@@ -82,24 +83,14 @@
 								<div class="header-home-icon"><a href="#"><img src="/Data/Sites/1/media/header/icon.png"
 											alt=""></a>
 								</div>
-								<ul class="navigation-wrapper navigation-header-1">
-									<li><a href="#particles-js">Giới thiệu</a></li>
-									<li><a href="#tien-ich">Tiện ích</a></li>
-									<li><a href="#thiet-ke">Thiết kế</a></li>
-									<li><a href="#vi-tri">Vị trí</a></li>
-								</ul>
+								<portal:modulewrapper id="mdl166" runat="server" configuremoduleid="166" />
 								<div class="navbrand">
 
 									<div class="logo"><a href="#">
 											<portal:modulewrapper id="mdl138" runat="server" configuremoduleid="138" />
 										</a></div>
 								</div>
-								<ul class="navigation-wrapper navigation-header-2">
-									<li><a href="#mat-bang">mặt bằng</a></li>
-									<li><a href="#chu-dau-tu">chủ đầu tư</a></li>
-									<li><a href="#tin-tuc">tin tức</a></li>
-									<li><a href="#lien-he">liên hệ</a></li>
-								</ul>
+								<portal:modulewrapper id="mdl167" runat="server" configuremoduleid="167" />
 								<div class="search-toggle"></div>
 								<div class="searchbox">
 									<portal:modulewrapper id="mdl141" runat="server" configuremoduleid="141" />
@@ -164,7 +155,7 @@
 
 			<footer class="footer">
 
-				<section class="contact-form" id="lien-he">
+				<section class="contact-form" id="section-8">
 					<div class="back-to-top">
 						<button href="" onclick="topFunction()"><img src="/Data/Sites/1/media/d-arrow.png"
 								alt="Back to top"></button>
@@ -179,7 +170,7 @@
 									<portal:modulewrapper id="mdl144" runat="server" configuremoduleid="144" />
 								</div>
 								<div class="partner-logo"><a href="#">
-										<p>Chủ đầu tư</p>
+
 										<portal:modulewrapper id="mdl145" runat="server" configuremoduleid="145" />
 
 									</a></div>

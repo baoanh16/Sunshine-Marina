@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-	
+
 	<xsl:template match="/">
-		
-		<section class="ss-marina-introduce" id="gioi-thieu">
+
+		<section class="ss-marina-introduce" id="section-1">
 			<div class="container">
 				<div class="article-title-b" data-aos="fade-down" data-aos-offset="100" data-aos-delay="0" data-aos-duration="700" data-aos-easing="ease-in-out">
 					<h2>
@@ -59,10 +59,10 @@
 	<xsl:template match="News" mode="Caption">
 		<xsl:if test="position() = 1">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 		</xsl:if>
-		
+
 	</xsl:template>
 	<xsl:template match="News" mode="Image1">
 		<xsl:if test="position() = 2">
@@ -80,7 +80,7 @@
 	<xsl:template match="News" mode="Image2">
 		<xsl:if test="position() = 3">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<img class="medium-zoom">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -94,7 +94,7 @@
 	<xsl:template match="News" mode="Image3">
 		<xsl:if test="position() = 4">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<img class="medium-zoom">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -108,7 +108,7 @@
 	<xsl:template match="News" mode="Image4">
 		<xsl:if test="position() =5">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<img class="medium-zoom">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -122,7 +122,7 @@
 	<xsl:template match="News" mode="Image5">
 		<xsl:if test="position() = 6">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<img class="medium-zoom">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -136,7 +136,7 @@
 	<xsl:template match="News" mode="Image6">
 		<xsl:if test="position() = 7">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<img class="medium-zoom">
 				<xsl:attribute name="src">
 					<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -147,6 +147,6 @@
 			</img>
 		</xsl:if>
 	</xsl:template>
-	
-	
+
+
 </xsl:stylesheet>

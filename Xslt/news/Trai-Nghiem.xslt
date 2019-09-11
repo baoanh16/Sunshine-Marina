@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
-	
+
 	<xsl:template match="/">
-		
-		<section class="ss-maria-convenient" id="tien-ich">
+
+		<section class="ss-maria-convenient" id="section-2">
 			<div class="container-16">
 				<div class="container">
 					<div class="article-title-b">
@@ -19,7 +19,7 @@
 					<div class="convenient-display-wrapper">
 						<div class="row">
 							<xsl:apply-templates select="/NewsList/News" mode="Item"></xsl:apply-templates>
-							
+
 						</div>
 					</div>
 				</div>
@@ -29,12 +29,12 @@
 	<xsl:template match="News" mode="Caption">
 		<xsl:if test="position() = 1">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-			
+
 			<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode="Item">
-		<xsl:if test="position()> 1 and position() &lt; 8 ">
+		<xsl:if test="position()> 1  ">
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 			<figure class="col-lg" data-aos="fade-right" data-aos-offset="250" data-aos-delay="200" data-aos-duration="900" data-aos-easing="ease-in-out">
 				<div class="figure-image shine">
@@ -57,7 +57,7 @@
 				</figcaption>
 			</figure>
 		</xsl:if>
-		
+
 	</xsl:template>
-	
+
 </xsl:stylesheet>
